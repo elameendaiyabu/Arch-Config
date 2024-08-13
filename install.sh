@@ -2,7 +2,7 @@
 
 # varibles
 
-shell = bashrc
+# shell = bashrc
 
 # Updating System
 
