@@ -10,7 +10,7 @@ sudo pacman -Syu
 
 # Install generic programs
 
-sudo pacman -S archlinux-keyring firefox neovim fastfetch fzf go git kitty make man-db obsidian spotify-launcher telegram-desktop timeshift ttf-jetbrains-mono-nerd unzip vlc discord libreoffice-still gimp postman-bin code dolphin bat curl bash btop tmux grep kitty 
+sudo pacman -S firefox neovim fastfetch fzf go git kitty man-db obsidian spotify-launcher telegram-desktop timeshift ttf-jetbrains-mono-nerd unzip vlc discord libreoffice-still gimp postman-bin code dolphin bat curl bash btop tmux grep kitty 
 
 # setup yay
 
