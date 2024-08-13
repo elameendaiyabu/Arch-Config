@@ -12,17 +12,13 @@ sudo pacman -Syu
 
 sudo pacman -S firefox neovim fastfetch fzf go kitty man-db obsidian spotify-launcher telegram-desktop timeshift ttf-jetbrains-mono-nerd unzip vlc discord libreoffice-still gimp code dolphin bat curl bash btop tmux grep kitty 
 
-# install yay 
-
-pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
-
-yay -S dunst-git postman-bin
 
 # switch capslock and escape key
 
-sudo mkdir /usr/local/share/kbd/keymaps/
-sudo cp ./keyboard-layout.map.gz /usr/local/share/kbd/keymaps/personal.map.gz
-sudo echo "KEYMAP=/usr/local/share/kbd/keymaps/personal.map" >> /etc/vconsole.conf
+# sudo mkdir -p /usr/local/share/kbd/keymaps/
+
+# sudo cp ./keyboard-layout.map.gz /usr/local/share/kbd/keymaps/personal.map.gz
+# sudo echo "KEYMAP=/usr/local/share/kbd/keymaps/personal.map" >> /etc/vconsole.conf
 
 # setup open-vpn to U.S
 # aliased vpn to start vpn on local machine
@@ -43,9 +39,9 @@ export NVM_DIR="$HOME/.nvm" && (
 
 # lines added to automatically source it upon login
 
-echo 'export NVM_DIR="$HOME/.nvm"' >> .bashrc
-echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> .bashrc
-echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> .bashrc
+echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc
+echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc
+echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc
 
 # install node
 
@@ -55,8 +51,7 @@ nvm install node
 
 sudo curl -s https://ohmyposh.dev/install.sh | bash -s
 cp -r ./posh-themes/ ~/Documents/posh-themes
-echo 'eval "$(oh-my-posh init bash --config ~/Documents/posh-themes/robbyrussell.omp.json)"
-' >> .bashrc
+echo 'eval "$(oh-my-posh init bash --config ~/Documents/posh-themes/robbyrussell.omp.json)"' >> ~/.bashrc
 
 # default global git configs
 
@@ -65,16 +60,17 @@ git config --global rerere.enabled true
 git config --global pull.rebase true
 git config --global init.defaultBranch master
 
-# more configs
-
-echo "alias ls='ls --color=auto'" >> .bashrc
-echo "alias grep='grep --color=auto'" >> .bashrc
-echo 'eval "$(fzf --bash)"' >> .bashrc
 
 # hyprland installation
 
-sudo pacman -S hyprland rofi waybar swaylock wlogout slurp swappy cliphist
+sudo pacman -S hyprland rofi waybar swaylock slurp swappy cliphist
 
+
+# install yay 
+
+sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
+
+yay -S dunst-git postman-bin wlogout 
 
 
 
