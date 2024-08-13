@@ -52,7 +52,7 @@ nvm install node
 # install oh-my-posh theme
 
 sudo curl -s https://ohmyposh.dev/install.sh | bash -s
-cp -r ./posh-themes/ Documents/posh-themes
+cp -r ./posh-themes/ ~/Documents/posh-themes
 echo 'eval "$(oh-my-posh init bash --config ~/Documents/posh-themes/robbyrussell.omp.json)"
 ' >> .bashrc
 
