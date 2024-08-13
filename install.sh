@@ -49,9 +49,9 @@ nvm install node
 
 # install oh-my-posh theme
 
-sudo curl -s https://ohmyposh.dev/install.sh | bash -s
-cp -r ./posh-themes/ ~/Documents/posh-themes
-echo 'eval "$(oh-my-posh init bash --config ~/Documents/posh-themes/robbyrussell.omp.json)"' >> ~/.bashrc
+# sudo curl -s https://ohmyposh.dev/install.sh | bash -s
+# cp -r ./posh-themes/ ~/Documents/posh-themes
+# echo 'eval "$(oh-my-posh init bash --config ~/Documents/posh-themes/robbyrussell.omp.json)"' >> ~/.bashrc
 
 # default global git configs
 
@@ -63,14 +63,16 @@ git config --global init.defaultBranch master
 
 # hyprland installation
 
-sudo pacman -S hyprland rofi waybar swaylock slurp swappy cliphist
+# sudo pacman -S hyprland rofi waybar swaylock slurp swappy cliphist
 
 
 # install yay 
 
 sudo pacman -S --needed git base-devel && git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 
-yay -S dunst-git postman-bin wlogout 
+yay -S postman-bin 
+
+# yay -S wlogout dunst-git
 
 
 
