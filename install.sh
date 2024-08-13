@@ -1,20 +1,26 @@
 #!/bin/bash
 
+# varibles
+
+shell = bashrc
+
 # Updating System
 
 sudo pacman -Syu
 
 # Install generic programs
 
-sudo pacman -Sy archlinux-keyring firefox neovim fastfetch fzf go git kitty make man-db obsidian spotify-launcher telegram-desktop timeshift ttf-jetbrains-mono-nerd unzip vlc discord libreoffice-still gimp postman-bin code dolphin bat curl bash btop tmux
+sudo pacman -Sy archlinux-keyring firefox neovim fastfetch fzf go git kitty make man-db obsidian spotify-launcher telegram-desktop timeshift ttf-jetbrains-mono-nerd unzip vlc discord libreoffice-still gimp postman-bin code dolphin bat curl bash btop tmux grep kitty 
 
 # setup yay
 
 sudo pacman -S --needed git base-devel yay
 
+yay -Syu
+
 # install yay packages
 
-# yay -S 
+yay -S dunst-git 
 
 # switch capslock and escape key
 
@@ -62,6 +68,16 @@ git config --global core.editor "nvim"
 git config --global rerere.enabled true
 git config --global pull.rebase true
 git config --global init.defaultBranch master
+
+# more configs
+
+echo "alias ls='ls --color=auto'" >> .bashrc
+echo "alias grep='grep --color=auto'" >> .bashrc
+echo 'eval "$(fzf --bash)"' >> .bashrc
+
+# hyprland installation
+
+sudo pacman -S hyprland rofi waybar swaylock wlogout slurp swappy cliphist
 
 
 
